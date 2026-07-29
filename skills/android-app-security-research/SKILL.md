@@ -25,7 +25,7 @@ Inventory every DEX and relevant native library. Map:
 - local databases, preferences, logs, credentials, and cross-user or work-profile boundaries;
 - network clients, authentication fields, object identifiers, upload/download consumers, and native parsers.
 
-Read [references/android-ipc.md](references/android-ipc.md) for component and IPC work. Read [references/webview-files-native.md](references/webview-files-native.md) for content, file, loader, and native boundaries.
+Use [references/android-analysis-playbook.md](references/android-analysis-playbook.md) for the detailed acquisition, static search, runtime, and evidence sequence. Read [references/android-ipc.md](references/android-ipc.md) for component and IPC work. Read [references/webview-files-native.md](references/webview-files-native.md) for content, file, loader, and native boundaries.
 
 ## Prioritize complete paths
 
@@ -50,6 +50,8 @@ An exported component, callable transaction, writable filename, bridge method, p
 6. Recheck the latest supported version before promoting the finding.
 
 Use [references/module-coverage.md](references/module-coverage.md) before declaring a substantial app reviewed. Use [references/evidence-reporting.md](references/evidence-reporting.md) for proof and report quality.
+
+When traffic, WebView, cryptography, or native behavior needs runtime observation, route to `mobile-auth-traffic-analysis` and load its Android hook recipes. Preserve the distinction between an observation hook and the final attacker path.
 
 ## Promotion gate
 
