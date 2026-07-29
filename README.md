@@ -6,10 +6,10 @@ A vendor-neutral Codex skill collection for authorized mobile application securi
 
 | Skill | Primary function | Use it for |
 | --- | --- | --- |
-| [`mobile-vulnerability-research`](skills/mobile-vulnerability-research/SKILL.md) | Platform-neutral assessment entry point and task router | Android and iOS attack-surface planning, mobile APIs, deep links, WebViews, local storage, file/update flows, native parsers, and initial hypothesis selection |
-| [`android-app-security-research`](skills/android-app-security-research/SKILL.md) | Android application and system-component research | APK triage, exported components, Binder, ContentProvider, URI grants, WebView bridges, file handling, dynamic loaders, JNI/native paths, device evidence, and finding validation |
-| [`mobile-auth-traffic-analysis`](skills/mobile-auth-traffic-analysis/SKILL.md) | Mobile authentication and business-API analysis | Proxy and instrumentation strategy, login/session flows, dynamic headers, request signing, OAuth-style boundaries, object authorization, roles, environment isolation, uploads, and safe control matrices |
-| [`vulnerability-research-process-control`](skills/vulnerability-research-process-control/SKILL.md) | Long-running research coordination and quality control | Target ledgers, root-cause deduplication, module coverage, maturity levels, time boxes, stop/reopen rules, cleanup, handoff, and report promotion gates |
+| [`mobile-vulnerability-research`](skills/mobile-vulnerability-research/SKILL.md) | Platform-neutral assessment entry point and task router | Android and iOS attack-surface planning, mobile APIs, deep links, WebViews, local storage, file/update flows, native parsers, hypothesis scoring, and time-box selection |
+| [`android-app-security-research`](skills/android-app-security-research/SKILL.md) | Android application and system-component research | APK acquisition, manifest/JADX search, exported components, Binder, ContentProvider, URI grants, WebView bridges, file handling, dynamic loaders, JNI/native paths, runtime evidence, and finding validation |
+| [`mobile-auth-traffic-analysis`](skills/mobile-auth-traffic-analysis/SKILL.md) | Mobile authentication, Hook, and business-API analysis | Android/iOS Frida recipes, WebView/WebKit observation, native HTTP stacks, crypto/signing hooks, cookies, keychain calls, login/session flows, OAuth-style boundaries, object authorization, environment isolation, and safe control matrices |
+| [`vulnerability-research-process-control`](skills/vulnerability-research-process-control/SKILL.md) | Long-running research coordination and quality control | Detailed research cycle, target ledgers, root-cause deduplication, module coverage, maturity levels, time boxes, stop/reopen rules, cleanup, experience cards, handoff, and report promotion gates |
 
 ## How the skills work together
 
@@ -30,11 +30,12 @@ The pack consistently separates interface reachability, diagnostic behavior, can
 
 The skill references provide reusable guidance for:
 
-- Android IPC, providers, WebViews, file consumers, loaders, and native inputs;
+- Android APK acquisition, static searches, IPC, providers, WebViews, file consumers, loaders, native inputs, and runtime evidence;
 - Android/iOS mobile attack-surface coverage;
-- authentication, session, signature, role, and object-authorization modeling;
+- concrete Android and iOS Frida observation hooks for network, WebView/WebKit, cryptography, cookies, keychain, and native functions;
+- authentication, session, signature, OAuth, role, environment, upload, and object-authorization modeling;
 - evidence terminology, redaction, reproducibility, and conservative reporting;
-- workspace templates, maturity levels, deduplication, stop conditions, and handoff.
+- full target workflows, workspace templates, maturity levels, deduplication, time boxes, experience transfer, stop conditions, and handoff.
 
 Each directory under `skills/` is an independent installable skill with its own `SKILL.md`, UI metadata, and focused references.
 

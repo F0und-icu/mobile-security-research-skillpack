@@ -14,7 +14,12 @@ Model the normal application protocol before changing authentication or object f
 3. Identify the network stack, host, path, method, serialization, authentication fields, signature fields, timestamps, nonces, device fields, and object identifiers.
 4. Record which values prove identity and which merely select an object.
 
-Read [references/traffic-hooking.md](references/traffic-hooking.md) when requests are encrypted, signed, generated in a WebView, or not replayable. Read [references/authentication-authorization.md](references/authentication-authorization.md) before changing identity, role, or object fields.
+Use [references/traffic-research-workflow.md](references/traffic-research-workflow.md) for the complete baseline-to-evidence sequence. Read [references/traffic-hooking.md](references/traffic-hooking.md) when requests are encrypted, signed, generated in a WebView, or not replayable. Read [references/authentication-authorization.md](references/authentication-authorization.md) before changing identity, role, or object fields.
+
+Load platform recipes only when needed:
+
+- Android Java, WebView, HTTP, crypto, cookie, and native hooks: [references/android-hook-recipes.md](references/android-hook-recipes.md).
+- iOS URL loading, WebKit, keychain, native, and Swift discovery hooks: [references/ios-hook-recipes.md](references/ios-hook-recipes.md).
 
 ## Choose the observation layer
 
