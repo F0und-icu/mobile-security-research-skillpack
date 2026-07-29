@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile Auth Traffic Analysis"
+  short_description: "移动端认证流量、签名字段、对象授权与安全取证分析工作流"
+  default_prompt: "Use $mobile-auth-traffic-analysis to analyze an authorized mobile authentication flow and test object authorization safely."

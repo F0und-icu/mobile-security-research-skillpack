@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android App Security Research"
+  short_description: "授权 Android 应用组件、IPC、WebView 与文件边界研究"
+  default_prompt: "Use $android-app-security-research to assess an authorized Android application and build evidence-backed findings."
